@@ -1,0 +1,8 @@
+Make a grocery list
+Need to take input from a file that has all of the data
+When the program is run it should prompt user to input an item number or quit the program, this should happen everytime an input cycle is completed as well
+Ask for item number, search through the program to see if the item number is valid or not
+if it is valid then Take in the name of the item, the taxability, the sale type, and the price
+if the item is taxable, add the tax to the price (probably need a new variable called total or sum)
+if the sale type is n or p then ask how many, n, (int) or how many pounds, p, (float), multiply unit price by int n or float p; 
+output the item number, item name, unit, unit price, tax, and subtotal
