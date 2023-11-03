@@ -1,7 +1,9 @@
 #include <iostream>
-#include "bst.h"
 #include "tnode.h"
+#include "bst.h"
 
 using namespace std;
 
+int main(){
 
+}

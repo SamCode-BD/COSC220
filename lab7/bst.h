@@ -9,18 +9,18 @@ class BST{
 		tNode* treeMax(tNode *); //find the maxiumum value in the BST by finding rightmost child
 		tNode* treeSuccessor(tNode *);	//find successor which is the node with the smallest key greater than x->key (key of node x)
 		tNode* createNode(); 
-		void inOrder(tNode *root); //write this function using recursion 
-		void preOrder(tNode *root);
-		void postOrder(tNode *root);
+		void inOrder(tNode *); //write this function using recursion 
+		void preOrder(tNode *);
+		void postOrder(tNode *);
 	public:
 		BST(); //initiate root as NULL 
 		~BST(); //clean--get rid of--all notes in the binary search tree
 		void inOrder();	  //call private recursive function	
 		void preOrder();  //call private recursive function 		(use utility function printNode)
 		void postOrder(); //call private recursive function
-		void bstInsert(*tNode root, *tNode z); //pass in the root and the node you want to insert 
-		void bstDelete(*tNode root, *tNode z); //pass in the root and the node you want to delete
-		tNode* treeSearch(tNode *, int data); //search for a node in the binary tree, pass root pointer and int key, and then   
-}
+		void bstInsert(tNode*, tNode*); //pass in the root and the node you want to insert 
+		void bstDelete(tNode*, tNode*); //pass in the root and the node you want to delete
+		tNode* treeSearch(tNode *, int); //search for a node in the binary tree, pass root pointer and int key, and then   
+};
 
 #endif

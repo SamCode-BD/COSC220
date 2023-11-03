@@ -12,6 +12,6 @@ class tNode{
 		void printNode(); //member function to print node information
 		friend class BST;
 	// need to define class BST as a friend class of tNode;
-}
+};
 
 #endif

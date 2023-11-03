@@ -11,5 +11,5 @@ tNode::tNode(){
 }
 
 void tNode::printNode(){
-	cout << tNode->data << endl;
+	//cout << newNode->data << endl;
 }
