@@ -8,8 +8,10 @@ tNode::tNode(){
 	parent = NULL;
 	left = NULL;
 	right = NULL;
+	cout << "Enter the integer data for the node" << endl;
+	cin >> data;
 }
 
 void tNode::printNode(){
-	//cout << newNode->data << endl;
+	cout << data << endl;
 }
