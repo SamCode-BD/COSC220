@@ -1,7 +1,7 @@
 all: Prog
 
 Prog: bst.o tnode.o lab7.o
-	g++ bst.o tnode.o lab7.o -o Prog
+	g++ bst.cpp tnode.cpp lab7.cpp -o Prog
 bst.o: bst.cpp
 	g++ -c bst.cpp
 tnode.o: tnode.cpp

@@ -19,7 +19,7 @@ class BST{
 		void preOrder();  //call private recursive function 		(use utility function printNode)
 		void postOrder(); //call private recursive function
 		void bstInsert(); //
-		void bstDelete(/*tNode*, tNode**/); //pass in the root and the node you want to delete
+		void bstDelete(); //pass in the node you want to delete
 		tNode* treeSearch(int); //search for a node in the binary tree, pass int key, and then   
 };
 
