@@ -46,17 +46,18 @@ void BST::bstInsert(){
 	tNode *x = root; //create tmp node x and set it to root
 	while (x != NULL){ //while root is not null
 		y = x; //set y = to the tmp value that points to root, so y points to x points to root
+		if (z->data == y->data){
+                	cout << "Duplicate value" << endl;
+                	delete z;
+			return;
+        	}
 		if (z->data < x->data) // if the data of newNode is less than the data of X, then set x equal to x left child
 			x = x->left;
-		else if	(z->data > x->data)		// else if data of newNode is (equal or) greater than the data of x, set x equal to x right child
+		else		// else if data of newNode is (equal or) greater than the data of x, set x equal to x right child
 			x = x->right;  
-		else
-			cout << "Duplicate value" << endl;
-			delete z;
-			return;
 	}
 	z->parent = y; //set the parent of newNode to the tmp pointer that points to x, which is now pointing to correct location from previous while loop
-	if (y == NULL) //if there is a node in the binary search tree
+	if (y == NULL) //if there is no node in the binary search tree
 		root = z; //newNode becomes root
 	else if (z->data < y->data)
 		y->left = z; //insert new node
@@ -129,12 +130,12 @@ tNode* BST::treeMax(tNode* root){
 }
 
 tNode* BST::treeSuccessor(tNode* x){
-	if (root->right != NULL)
-		return treeMin(root->right);
+	if (x->right != NULL)
+		return treeMin(x->right);
 	else{
-		tNode* y = root->parent;
-		while (y != NULL && root == y->right){
-			root = y;
+		tNode* y = x->parent;
+		while (y != NULL && x == y->right){
+			x = y;
 			y = y->parent;
 		}
 		return y;
