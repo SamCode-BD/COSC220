@@ -20,6 +20,8 @@ public:
 	void shuffleCard();
 	aCard getCard();
 	void printSuit(char);
+	char assignSuit(aCard);
+	void displayCard(aCard, int, char);
 	void displayAce(int, char);
 	void displayTwo(int, char);
 	void displayThree(int, char);
