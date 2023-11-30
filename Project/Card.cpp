@@ -89,16 +89,18 @@ void Card::displayTwo(int row, char pic){
                 cout << "|2      |";
 	if (row == 3)
                 cout << "|       |";
-	if (row == 4)
+	if (row == 4){
 		cout << "|   "; printSuit(pic); cout << "   |";
+	}
 	if (row == 5)
                 cout << "|       |";
         if (row == 6)
                 cout << "|       |";
         if (row == 7)
                 cout << "|       |";
-	if (row == 8)
+	if (row == 8){
 		cout << "|   "; printSuit(pic); cout << "   |";
+	}
 	if (row == 9)
                 cout << "|       |";
         if (row == 10)
