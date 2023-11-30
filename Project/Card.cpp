@@ -23,26 +23,40 @@ void Card::shuffleCard(){
 	nextCard = 0;
 }
 
-Card::Card(aCard [] Cards){
+Card::Card(){
 	int nextCard = 0;
 	for (int i=0; i < 13; i++){
 		Cards[i].num = i+1;
-		Cards[i].pic = spade;
+		for (int j = 0; j < 4; j++)
+			Cards[i].pic[j] = spade[j];
 	}
 	for (int i = 13; i < 26; i++){
 		Cards[i].num = i-12;
-		Cards[i].pic = club;
+		for (int j = 0; j < 4; j++)
+			Cards[i].pic[j] = club[j];
 	}
 	for (int i = 26; i < 39; i++){
 		Cards[i].num = i-25;
-		Cards[i].pic = heart;
+		for (int j = 0; j < 4; j++)
+			Cards[i].pic[j] = heart[j];
 	}
 	for (int i = 39; i < 52; i++){
 		Cards[i].num = i-38;
-		Cards[i].pic = diamond;
+		for (int j = 0; j < 4; j++)
+			Cards[i].pic[j] = diamond[j];
 	}
 }
 
+void Card::printSuit(char suit){	
+	if (suit == 's')
+                        cout << spade; 
+	else if (suit == 'h')
+                        cout << heart;
+	else if (suit == 'c')
+                        cout << club;
+	else if (suit == 'd')
+                        cout << diamond;
+}
 void Card::displayAce(int row, char pic){
 	if (row == 1)
 		cout << "---------";
@@ -54,8 +68,9 @@ void Card::displayAce(int row, char pic){
 	        cout << "|       |";
 	if (row == 5)
 	      	cout << "|       |";
-	if (row == 6)
-		cout << "|   "<<pic<<"   |";
+	if (row == 6){
+		cout << "|   "; printSuit(pic); cout << "   |";
+	}
 	if (row == 7)
                 cout << "|       |";
 	if (row == 8)
@@ -75,7 +90,7 @@ void Card::displayTwo(int row, char pic){
 	if (row == 3)
                 cout << "|       |";
 	if (row == 4)
-                cout << "|   "<<pic<<"   |";
+		cout << "|   "; printSuit(pic); cout << "   |";
 	if (row == 5)
                 cout << "|       |";
         if (row == 6)
@@ -83,7 +98,7 @@ void Card::displayTwo(int row, char pic){
         if (row == 7)
                 cout << "|       |";
 	if (row == 8)
-		cout << "|   "<<pic<<"   |";
+		cout << "|   "; printSuit(pic); cout << "   |";
 	if (row == 9)
                 cout << "|       |";
         if (row == 10)
@@ -97,19 +112,19 @@ void Card::displayThree(int row, char pic){
 	if (row == 2)
                 cout << "|3      |";
 	if (row == 3)
-		cout << "|   "<<pic<<"   |";
+		cout << "|   "; printSuit(pic); cout << "   |";
 	if (row == 4)
 		cout << "|       |";
 	if (row == 5)
 		cout << "|       |";
 	if (row == 6)
-                cout << "|   "<<pic<<"   |";
+                cout << "|   "; printSuit(pic); cout << "   |";
 	if (row == 7)
                 cout << "|       |";
         if (row == 8)
                 cout << "|       |";
 	if (row == 9)
-                cout << "|   "<<pic<<"   |";
+                cout << "|   "; printSuit(pic); cout << "   |";
 	if (row == 10)
                 cout << "|      3|";
 	if (row == 11)
@@ -151,7 +166,7 @@ void Card::displayFive(int row, char pic){
         if (row == 5)
                 cout << "|       |";
         if (row == 6)
-                cout << "|   "<<pic<<"   |";
+                cout << "|   "; printSuit(pic); cout << "   |";
         if (row == 7)
                 cout << "|       |";
         if (row == 8)
@@ -196,7 +211,7 @@ void Card::displaySeven(int row, char pic){
 	if (row == 3)
                 cout << "| " << pic << "   " << pic << " |";
         if (row == 4)
-                cout << "|   "<<pic<<"   |";
+                cout << "|   "; printSuit(pic); cout << "   |";
         if (row == 5)
                 cout << "|       |";
         if (row == 6)
