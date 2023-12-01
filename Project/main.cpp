@@ -7,58 +7,62 @@ int main(){
 	Card myDeck; 
 	char choice;
 	int num;
-	/*
-	myDeck.getCard();
-	myDeck.shuffleCard();
-	*/
 	cout << "How many cards would you like to display? (Enter 2, 3, 4, or 5)" << endl;
 	cin >> num;
-	while (num < 2 && num > 5){
-		cout << "Invalid number of cards. Try again.";
+	while (num < 2 || num > 5){
+		cout << "Invalid number of cards. Try again." << endl;
 		cin >> num;
 	}
 	if (num == 2){
-		myDeck.shuffleCard();
-		aCard test = myDeck.getCard();
-		//cout << test.pic; cout << endl; cout << test.num;
-		choice = myDeck.assignSuit(test);		//call function to assign the suit of the card to the choice variable that will be passed the display card function;
-		myDeck.printSuit(choice);
-		//aCard test1 = myDeck.getCard();
-		//char choice1 = myDeck.assignSuit(test1);
-		//myDeck.printSuit(choice);
-		
-	//	for (int i = 0; i < 12; i++){
-          //              myDeck.displayCard(test, i, choice);
-                        //myDeck.displayCard(test1, i, choice1);
-            //            cout << endl;
-              //  }
-		
-	}
-	//cout << "Enter the suit of card you would like" << endl;
-	//cout << "s for spades, h for hearts, c for clubs, d for diamonds." << endl;
-	//cin >> choice;
-	//myDeck.printSuit(choice);
-	/*if (choice == 's')
-		for (int i = 0; i < 4; i++){
-			pic[i] = spade[i];
+		myDeck.shuffleCard(); //shuffle deck
+		aCard card = myDeck.getCard(); //create a card to get data from ; //test.num = 1;
+		aCard card1 = myDeck.getCard();
+		for (int i = 0; i < 12; i++){
+			myDeck.displayCard(card, i); //for loop for the card you create to print 
+			myDeck.displayCard(card1, i);
+			cout << endl;
 		}
-	*/
-	/*
-	for (int i = 0; i < 12; i++){
-		myDeck.displayAce(i, choice);
-		myDeck.displayTwo(i, choice);
-		myDeck.displayThree(i, choice);
-		myDeck.displayFour(i, choice);
-		myDeck.displayFive(i, choice);
-		myDeck.displaySix(i, choice);
-		myDeck.displaySeven(i, choice);
-		myDeck.displayEight(i, choice);
-		myDeck.displayNine(i, choice);
-		myDeck.displayTen(i, choice);
-		myDeck.displayJack(i, choice);
-		myDeck.displayQueen(i, choice);
-		myDeck.displayKing(i, choice);
-		cout << endl;
-	} 
-	*/
+	}
+	else if (num == 3){
+		myDeck.shuffleCard();
+		aCard card = myDeck.getCard();
+		aCard card1 = myDeck.getCard();
+		aCard card2 = myDeck.getCard();
+		for (int i = 0; i < 12; i++){
+                        myDeck.displayCard(card, i); //for loop for the card you create to print 
+                        myDeck.displayCard(card1, i);
+			myDeck.displayCard(card2, i);
+                        cout << endl;
+                }
+	}
+	else if (num == 4){
+		myDeck.shuffleCard();
+		aCard card = myDeck.getCard();
+                aCard card1 = myDeck.getCard();
+                aCard card2 = myDeck.getCard();
+		aCard card3 = myDeck.getCard();
+                for (int i = 0; i < 12; i++){
+                        myDeck.displayCard(card, i); //for loop for the card you create to print 
+                        myDeck.displayCard(card1, i);
+                        myDeck.displayCard(card2, i);
+			myDeck.displayCard(card3, i);
+                        cout << endl;
+                }
+	}
+	else if (num == 5){
+		myDeck.shuffleCard();
+		aCard card = myDeck.getCard();
+                aCard card1 = myDeck.getCard();
+                aCard card2 = myDeck.getCard();
+                aCard card3 = myDeck.getCard();
+                aCard card4 = myDeck.getCard();
+		for (int i = 0; i < 12; i++){
+                        myDeck.displayCard(card, i); //for loop for the card you create to print 
+                        myDeck.displayCard(card1, i);
+                        myDeck.displayCard(card2, i);
+                        myDeck.displayCard(card3, i);
+			myDeck.displayCard(card4, i);
+                        cout << endl;
+                }
+	}
 }

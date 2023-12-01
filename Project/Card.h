@@ -19,22 +19,20 @@ public:
 	Card();
 	void shuffleCard();
 	aCard getCard();
-	void printSuit(char);
-	char assignSuit(aCard);
-	void displayCard(aCard, int, char);
-	void displayAce(int, char);
-	void displayTwo(int, char);
-	void displayThree(int, char);
-	void displayFour(int, char);
-	void displayFive(int, char);
-	void displaySix(int, char);
-	void displaySeven(int, char);
-	void displayEight(int, char);
-	void displayNine(int, char);
-	void displayTen(int, char);
-	void displayJack(int, char);
-	void displayQueen(int, char);
-	void displayKing(int, char);
+	void displayCard(aCard, int);
+	void displayAce(int, aCard);
+	void displayTwo(int, aCard);
+	void displayThree(int, aCard);
+	void displayFour(int, aCard);
+	void displayFive(int, aCard);
+	void displaySix(int, aCard);
+	void displaySeven(int, aCard);
+	void displayEight(int, aCard);
+	void displayNine(int, aCard);
+	void displayTen(int, aCard);
+	void displayJack(int, aCard);
+	void displayQueen(int, aCard);
+	void displayKing(int, aCard);
 };
 
 #endif
