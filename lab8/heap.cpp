@@ -30,11 +30,11 @@ int Heap::parent(int i){
 }
 
 int Heap::leftChild(int i){
-	return (2*i)+1;
+	return 2*i+1;
 }
 
 int Heap::rightChild(int i){
-	return (2*i)+2;
+	return 2*i+2;
 }
 
 void Heap::heapify(int i){
@@ -57,7 +57,7 @@ void Heap::heapify(int i){
 
 void Heap::buildHeap(){
 	int i;
-	for (i =((heapSize/2) -1); i > 0; i--){ //might need to be i = 0 not sure if this for loop written correctly 
+	for (i =((heapSize/2) -1); i >= 0; i--){ //might need to be i = 0 not sure if this for loop written correctly 
 		heapify(i); //call heapify with modified i value
 		cout << endl; cout << endl;
 		printHeap();
@@ -78,12 +78,13 @@ void Heap::heapSort(){
 	int tmp; //create tmp for swap later
 	int tmpSize = heapSize; //create tmp size so heapsize doesn't have to change
 	//buildHeap();
-	for (int i = tmpSize-1; i >= 1; i--){ // might need i-- again 	
+	for (int i = heapSize-1; i >= 0; i--){ // might need i-- again 	
 		tmp = A[0];   ///swap
 		A[0] = A[i];
 		A[i] = tmp;
 		heapify(0); //call heapify with value 0
 		}
+	heapSize = tmpSize;
 }
 
 int Heap::extractMax(){
